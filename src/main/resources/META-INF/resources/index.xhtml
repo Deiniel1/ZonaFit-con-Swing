@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+<h:head>
+    <title>ZonaFit Gym</title>
+    <link rel="stylesheet" href="https://unpkg.com/primeflex@latest/primeflex.css"/>
+</h:head>
+<h:body>
+
+    <div class="card">
+        <h:form id="forma-clientes">
+            <p:growl id="mensajes" showDetails="true"/>
+            <p:panel header="Bienvenido a ZonaFit Gym">
+                <p:outputLabel value="Esta es la página de inicio de nuestra aplicación."/>
+                <div class="card">
+                    <p:menubar>
+                        <p:menuitem value="Inicio" icon="pi pi -fw pi-user"
+                                    update=":forma-clientes:clientes-tabla"
+                                    actionListener="#{indexControlador.cargarDatos}"/>
+
+                    </p:menubar>
+                    <div class="card">
+                        <p:dataTable value="#{indexControlador.clientes}" var="cliente"
+                                     id="clientes-tabla" widgetVar="clientesTabla">
+                            <f:facet name="header">
+                                <div class="flex justify-content-center flex-wrap
+                                card-container yellow-container">
+                                    <div class="flex align-items-center
+                                justify-content-center
+                                w-20rem h-4rem bg-yellow-500 font-bold
+                                text-gray-900 border-round m-2">
+                                        <h3>ZONA FIT (GYM)</h3>
+                                    </div>
+                                </div>
+                            </f:facet>
+
+                        </p:dataTable>
+
+                    </div>
+                </div>
+            </p:panel>
+        </h:form>
+    </div>
+</h:body>
+</html>

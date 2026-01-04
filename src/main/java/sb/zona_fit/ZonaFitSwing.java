@@ -8,7 +8,7 @@ import org.springframework.context.ConfigurableApplicationContext;
 import sb.zona_fit.gui.ZonaFitForma;
 
 import javax.swing.*;
-@SpringBootApplication
+//@SpringBootApplication
 public class ZonaFitSwing {
     public static void main(String[] args) {
         //modo oscuro
